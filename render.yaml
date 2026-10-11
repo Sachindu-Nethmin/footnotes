@@ -1,0 +1,15 @@
+# Render blueprint: the public copy of Footnotes runs Gemma in each visitor's browser (WebLLM),
+# so there is no model server and no diary ever reaches a machine its writer doesn't control.
+services:
+  - type: web
+    name: footnotes
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: LLM_PROVIDER
+        value: browser
+      - key: WIKI_USER_AGENT
+        value: Footnotes/0.1 (bucket-list notebook)

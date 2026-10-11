@@ -1,0 +1,26 @@
+{
+  "name": "footnotes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A paper-notebook bucket list for places you want to visit. Finds beautiful places near you from open data, and a local open-weight model (Gemma) fills in the details and turns what you tell it into diary pages that never leave your device.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.85",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "typescript": "^5"
+  }
+}
